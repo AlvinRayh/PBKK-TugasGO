@@ -17,7 +17,7 @@ func reverse(s string) string {
 
 func main() {
 	reader := bufio.NewReader(os.Stdin)
-	fmt.Print("Masukkan nama (min 3 kata): ")
+	fmt.Print("Masukkan minimal 3 kata): ")
 	input, err := reader.ReadString('\n')
 	if err != nil {
 		fmt.Println("Input tidak valid")
@@ -27,7 +27,7 @@ func main() {
 	input = strings.TrimSpace(input)
 	words := strings.Fields(input)
 	if len(words) < 3 {
-		fmt.Println("Input harus minimal 3 kata.")
+		fmt.Println("Input minimal 3 kata.")
 		return
 	}
 
